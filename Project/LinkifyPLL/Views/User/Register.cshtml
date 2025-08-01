@@ -1,0 +1,20 @@
+﻿@model UserRegisterMV
+
+<form asp-controller="User" asp-action="Register">
+	<div class="mb-3">
+		<label for="name" class="form-label">Name</label>
+		<input asp-for="Name" type="text" class="form-control" id="name">
+		<span asp-validation-for="Name" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label for="email" class="form-label">Email</label>
+		<input asp-for="Email" type="email" class="form-control" id="email">
+		<span asp-validation-for="Email" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label for="password" class="form-label">Password</label>
+		<input asp-for="Password" type="password" class="form-control" id="password">
+		<span asp-validation-for="Password" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
